@@ -1,0 +1,118 @@
+sl
+clear
+blue='\033[34;1m'
+green='\033[32;1m'
+purple='\033[35;1m'
+cyan='\033[36;1m'
+red='\033[31;1m'
+white='\033[37;1m'
+yellow='\033[33;1m'
+toilet -f big -F border -F metal sastra
+neofetch --ascii_distro Pop!_OS
+cowsay jangan recode hitam sc gw anjing
+echo $blue "SELAMAT DATANG REK"
+echo
+echo $cyan "MENU DI PILIH ANJING"
+echo
+echo $green
+echo "1:IP TRACKING"
+echo
+echo "2:JARINGAN STABILKAN"
+echo
+echo "3:wa pembuat"
+echo
+echo "4:KALKULATOR"
+echo
+echo "5:DOKSLI WEB"
+echo
+echo "6:KELUAR"
+echo
+echo "7:gabut kang"
+echo
+echo "8:GILA KANG"
+echo
+echo
+read -p "Pilih mana: " bro
+if [ "$bro" -eq 1 ]
+then
+echo "masukan ip ingin lu track"
+read ip
+curl ipinfo.io/$ip
+fi
+if [ "$bro" -eq 2 ]
+then
+ping 1.1.1.1
+fi
+if [ "$bro" -eq 3 ]
+then
+xdg-open "https://wa.me/6281277769327"
+fi
+if [ "$bro" -eq 4 ]
+then
+clear
+cowsay kalo eror wajarin gw soal mood gw rendah
+echo "Masukkan angka pertama: "
+read angka1
+
+echo "Pilih operasi (+, -, *, /): "
+read operasi
+
+echo "Masukkan angka kedua: "
+read angka2
+
+case $operasi in
+    +)
+        hasil=$(echo "$angka1 + $angka2" |= -l)
+        ;;
+    -)
+        hasil=$(echo "$angka1 - $angka2" |=  -l)
+        ;;
+    \*)
+        hasil=$(echo "$angka1 * $angka2" |=  -l)
+        ;;
+    /)
+        if [ "$angka2" == "0" ]; then
+            echo "Pembagian dengan nol tidak diperboleh>
+            exit 1
+        else
+            hasil=$(echo "scale=2; $angka1 / $angka2" |>
+        fi
+        ;;
+    *)
+        echo "Operasi tidak valid."
+        exit 1
+        ;;
+esac
+
+echo "Hasil: $hasil"
+fi
+if [ "$bro" -eq 5 ]
+then
+clear
+figlet sastra
+echo "BERIKAN DOMAIN NYA"
+read domain
+whois $domain
+fi
+if [ "$bro" -eq 6 ]
+then
+clear
+exit
+fi
+if [ "$bro" -eq 7 ]
+then
+echo "masukan ke gabutan anda"
+read gabut
+cowsay $gabut
+fi
+if [ "$bro" -eq 8 ]
+then
+echo kegabutan anda sini masukan
+read malas
+nomer  $malas
+fi
+
+if [ "$bro" -eq 9 ]
+then
+neofetch
+fi
