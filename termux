@@ -120,7 +120,4 @@ read malas
 nomer  $malas
 fi
 
-if [ "$bro" -eq 9 ]
-then
-neofetch
-fi
+
