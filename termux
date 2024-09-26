@@ -31,7 +31,8 @@ echo "7:gabut kang"
 echo
 echo "8:GILA KANG"
 echo
-echo "9:track nomber"
+echo "9:track nomer"
+echo
 echo
 read -p "Pilih mana: " bro
 if [ "$bro" -eq 1 ]
@@ -73,10 +74,10 @@ case $operasi in
         ;;
     /)
         if [ "$angka2" == "0" ]; then
-            echo "Pembagian dengan nol tidak diperboleh>
+            echo "Pembagian dengan nol tidak diperbolehkan."
             exit 1
         else
-            hasil=$(echo "scale=2; $angka1 / $angka2" |>
+            hasil=$(echo "scale=2; $angka1 / $angka2" | bc -l)
         fi
         ;;
     *)
@@ -95,6 +96,7 @@ echo "BERIKAN DOMAIN NYA"
 read domain
 whois $domain
 fi
+
 if [ "$bro" -eq 6 ]
 then
 clear
@@ -105,13 +107,6 @@ then
 echo "masukan ke gabutan anda"
 read gabut
 cowsay $gabut
-if [ "$bro" -eq 9 ]
-then
-figlet sastra
-git clone https://github.com/Shen367/phone-number-tracker
-cd phone-number-tracker
-pip install phonenumbers
-python Tracker
 fi
 if [ "$bro" -eq 8 ]
 then
@@ -120,4 +115,13 @@ read malas
 nomer  $malas
 fi
 
+if [ "$bro" -eq 9 ]
+then
+clear
+figlet sastra
+git clone https://github.com/Shen367/phone-number-tracker
+cd phone-number-tracker
+pip install phonenumbers
+python Tracker
 
+fi
