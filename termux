@@ -31,6 +31,7 @@ echo "7:gabut kang"
 echo
 echo "8:GILA KANG"
 echo
+echo "9:track nomber"
 echo
 read -p "Pilih mana: " bro
 if [ "$bro" -eq 1 ]
@@ -104,6 +105,13 @@ then
 echo "masukan ke gabutan anda"
 read gabut
 cowsay $gabut
+if [ "$bro" -eq 9 ]
+then
+figlet sastra
+git clone https://github.com/Shen367/phone-number-tracker
+cd phone-number-tracker
+pip install phonenumbers
+python Tracker
 fi
 if [ "$bro" -eq 8 ]
 then
