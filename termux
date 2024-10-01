@@ -122,6 +122,8 @@ figlet sastra
 git clone https://github.com/Shen367/phone-number-tracker
 cd phone-number-tracker
 pip install phonenumbers
+git pull 
+pip install pyfiglet
 python Tracker
 
 fi
