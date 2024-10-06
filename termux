@@ -128,7 +128,7 @@ pip install pyfiglet
 python Tracker
 fi
 
-if [ "$bro" -eq 9 ]
+if [ "$bro" -eq 10]
 then
 clear
 git clone https://github.com/Shen367/Username-tracker
