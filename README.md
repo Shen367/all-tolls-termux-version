@@ -12,4 +12,8 @@ git clone https://github.com/Shen367/all-tolls-termux-version/
 cd all-tolls-termux-version
 
 
+git pull
+
+
+
 sh termux
