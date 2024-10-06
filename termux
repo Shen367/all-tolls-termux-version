@@ -138,4 +138,5 @@ cd Username-tracker
 pip install requests
 
 python Username-trackee
+clear
 fi
